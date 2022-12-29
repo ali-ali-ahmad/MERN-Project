@@ -6,7 +6,7 @@ import './css/main.css'
 // import {Tabs, Tab, Box } from '@mui/material';
 // import PlayerForm from '../components/PlayerForm';
 // import CssGenerator from '../components/CssGenerator/CssGenerator';
-import TagGenerator from '../components/TagGenerator/TagGenerator';
+import TagGenerator from '../../components/TagGenerator/TagGenerator';
 
 const TagHandler = (props) => {
     const [html, setHtml] = useState([]);
