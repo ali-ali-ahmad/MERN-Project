@@ -1,0 +1,68 @@
+import { Link } from 'react-router-dom';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import React, {useState} from 'react';
+
+const Game3 = (props) => {
+    const { players, PlayerStatus } = props;
+    const [status, setStatus] = useState();
+    const [statusId, setStatusId] = useState();
+
+    return (
+        <TableContainer component={Paper}>
+            <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+                <TableHead>
+                    <TableRow>
+                        <TableCell align="center">Player Name</TableCell>
+                        <TableCell align="center">Action</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                {players.map((player, inx) => {
+                    return(
+                    <TableRow
+                        key={inx}
+                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                    >
+                        <TableCell component="th" scope="row" align="center">
+                        <Link to={`/players/${player._id}`}>{player.name}</Link>
+                        </TableCell>
+                        <TableCell align="center">
+                        <FormControl
+                            onChange={(e) => {
+                                setStatus(e.target.value);
+                                setStatusId(player._id);
+                                PlayerStatus({statusId, status});
+                            }}
+                            >
+                            <RadioGroup
+                                row
+                                aria-labelledby="demo-row-radio-buttons-group-label"
+                                name="row-radio-buttons-group"
+                                value={player.status}
+                            >
+                                <FormControlLabel value="1" control={<Radio />} label="Playing" />
+                                <FormControlLabel value="2" control={<Radio />} label="Not Playing" />
+                                <FormControlLabel value="3" control={<Radio />} label="Undecided" />
+                            </RadioGroup>
+                            </FormControl>
+                        </TableCell>
+                    </TableRow>
+                    )
+                })}
+                </TableBody>
+            </Table>
+        </TableContainer>
+    )
+}
+
+export default Game3;

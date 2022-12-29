@@ -1,0 +1,8 @@
+.frontendHolder:hover, frontendHolder:active {
+    opacity: 0.3;
+    text-decoration: underline;
+}
+/* *:hover {
+    transform: scale(0.6);
+    transition-duration: 0.5s;
+} */
