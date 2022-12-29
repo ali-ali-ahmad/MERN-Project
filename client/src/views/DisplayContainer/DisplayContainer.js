@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import TagDisplay from "../components/TagGenerator/TagDisplay";
-import TagGenerator from "../components/TagGenerator/TagGenerator";
+import TagDisplay from "../../components/TagDisplay/TagDisplay";
+import TagGenerator from "../../components/TagGenerator/TagGenerator";
 import axios from "axios";
 var elementFromPoint = require("element-from-point")
 const DisplayContainer = (props) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import DisplayContainer from './views/DisplayContainer';
+import DisplayContainer from './views/DisplayContainer/DisplayContainer';
 import {Routes, Route} from 'react-router-dom';
     
 function App() {
