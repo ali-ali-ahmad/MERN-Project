@@ -1,5 +1,5 @@
 import React from 'react';
-import './TagStyle.css';
+import './css/TagStyle.css';
 
 
 const TagDisplay = (props) => {
