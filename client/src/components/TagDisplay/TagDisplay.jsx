@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/TagStyle.css';
+import styles from './TagDisplay.module.css';
 
 
 const TagDisplay = (props) => {
@@ -26,7 +26,7 @@ const TagDisplay = (props) => {
                 display: "flex",
                 
             }}
-            key={ i } className="frontendHolder" id={tag._id} dangerouslySetInnerHTML={{ __html: tag.html }}></div>
+            key={ i } className={styles.frontendHolder} id={tag._id} dangerouslySetInnerHTML={{ __html: tag.html }}></div>
             </div>
             )}
         </>
