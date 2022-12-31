@@ -6,16 +6,17 @@
 .items {
     display: flex;
     justify-content: space-between;
-    width: 20%;
+    width: 30%;
+    min-width: 300px;
 }
 
 .navitems {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
 }
 
-.navitems .Link{
+.Link{
     color: white;
     text-decoration: none;
 }

@@ -17,7 +17,7 @@ const NavBar = () => {
                 <Toolbar className='tools' >
                 <div className='items'>
                     <Typography variant="h5">
-                        Logo
+                    <Link className='Link' to={'/home'}>Logo</Link>
                     </Typography>
                     <div className='navitems'>
                     <Link className='Link' to={'/profile'}>Profile</Link>
