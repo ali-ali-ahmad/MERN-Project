@@ -5,6 +5,7 @@ const MyProjects = () => {
     return (
         <div>
             <NavBar/>
+            projects
         </div>
     )
 }
