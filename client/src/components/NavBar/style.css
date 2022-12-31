@@ -1,0 +1,21 @@
+.tools {
+    display: flex;
+    justify-content: space-between;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.navitems {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navitems .Link{
+    color: white;
+    text-decoration: none;
+}
