@@ -1,0 +1,22 @@
+.tools {
+    display: flex;
+    justify-content: space-between;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    min-width: 300px;
+}
+
+.navitems {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.Link{
+    color: white;
+    text-decoration: none;
+}
