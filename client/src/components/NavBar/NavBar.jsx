@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom";
 import './style.css'
+import LoginModal from '../LoginModal/LoginModal';
 
 const NavBar = () => {
     return (
@@ -25,7 +26,7 @@ const NavBar = () => {
                     <Link className='Link' to={'/about'}>About</Link>
                     </div>
                 </div>
-                <Button color="inherit">Login</Button>
+                <LoginModal/>
                 </Toolbar>
             </AppBar>
             </Box>
