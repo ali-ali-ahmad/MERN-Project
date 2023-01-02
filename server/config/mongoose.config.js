@@ -1,8 +1,10 @@
 const mongoose = require("mongoose");
+mongoose.set("strictQuery", false);
 mongoose.connect("mongodb://127.0.0.1/frontEnd", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-})
-.then(()=> console.log('Established a connection to Datebase'))
-.catch(err => console.log('something went wrong when connecting to Datebase', err));
-
+  })
+  .then(() => console.log("Established a connection to the database"))
+  .catch((err) =>
+    console.log("Something went wrong when connecting to the database", err)
+  );
