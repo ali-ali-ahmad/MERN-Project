@@ -1,4 +1,6 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,6 +13,34 @@ import './style.css'
 import LoginModal from '../LoginModal/LoginModal';
 
 const NavBar = () => {
+    const [loggedInUser, setLoggedInUser] = useState(null);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      axios
+        .get("http://localhost:8000/api/users/loggedin", {
+          withCredentials: true,
+        })
+        .then((res) => {
+          setLoggedInUser(res.data.user);
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+          navigate("/home");
+        });
+    }, []);
+  
+    const logout = async(e) => {
+      await axios.get("http://localhost:8000/api/users/logout", { withCredentials: true })
+        .then((res) => {
+          console.log(res);
+          navigate("/home");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
     return (
         <nav className='nav'>
             <Box sx={{ flexGrow: 1 }}>
@@ -26,7 +56,13 @@ const NavBar = () => {
                     <Link className='Link' to={'/about'}>About</Link>
                     </div>
                 </div>
-                <LoginModal/>
+                {loggedInUser ? (
+                <div>
+                    <button className='logout' onClick={logout}>Logout</button>
+                </div>
+                ) : (
+                    <LoginModal/>
+                )}
                 </Toolbar>
             </AppBar>
             </Box>

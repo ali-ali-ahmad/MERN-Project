@@ -17,7 +17,7 @@ const Dashboard = () => {
         })
         .catch((err) => {
           console.log(err);
-          navigate("/marah");
+          navigate("/dashboard");
         });
     }, []);
   
@@ -25,7 +25,7 @@ const Dashboard = () => {
       await axios.get("http://localhost:8000/api/users/logout", { withCredentials: true })
         .then((res) => {
           console.log(res);
-          navigate("/marah");
+          navigate("/dashboard");
         })
         .catch((err) => {
           console.log(err);

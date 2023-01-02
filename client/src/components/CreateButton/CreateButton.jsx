@@ -7,7 +7,7 @@ const CreateButton = () => {
     return (
         <div className='addbutton'>
             <div className='create'>
-                <Link className='Link' to={'/'}>
+                <Link className='Link' to={'/create'}>
                 <AddIcon fontSize="large" color=""></AddIcon>
                 </Link>
             </div>
