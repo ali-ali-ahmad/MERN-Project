@@ -1,12 +1,7 @@
 const mongoose = require('mongoose');
 const frontEndSchema = new mongoose.Schema({
-    html: {
-        type: Array
-    },
-
-    width: {type:Number},
-    height: {type:Number},
-    color: {type:String},
-    BGColor: {type:String},
+    title: {type: String},
+    html: {},
+    style: {},
 }, {timestamps: true});
 module.exports.FrontEnd = mongoose.model('frontEnd', frontEndSchema)

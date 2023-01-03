@@ -1,13 +1,11 @@
 const { FrontEnd } = require("../models/frontEnd.model");
 
 module.exports.createFrontEnd = (request, response) => {
-    const { html, width, height, color, BGColor } = request.body;
+    const { title, html, style } = request.body;
     FrontEnd.create({
+        title,
         html,
-        width,
-        height,
-        color,
-        BGColor,
+        style,
     })
         .then((frontEnd) => response.json(frontEnd))
         .catch((err) => response.json(err));
@@ -25,10 +23,19 @@ module.exports.getFrontEnd = (request, response) => {
         .catch((err) => response.json(err));
 };
 
+// module.exports.updateFrontEnd = (request, response) => {
+//     FrontEnd.findOneAndUpdate(
+//         { _id: request.params.id },
+//         request.body,
+//         { new: true }
+//     )
+//     .then((updatedFrontEnd) => response.json(updatedFrontEnd))
+//     .catch((err) => response.json(err));
+// };
 module.exports.updateFrontEnd = (request, response) => {
     FrontEnd.findOneAndUpdate(
         { _id: request.params.id },
-        { $push: request.body},
+        { $set: request.body},
         { new: true }
     )
     .then((updatedFrontEnd) => response.json(updatedFrontEnd))
