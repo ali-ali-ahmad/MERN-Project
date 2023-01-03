@@ -6,7 +6,6 @@ import CreateButton from '../../components/CreateButton/CreateButton';
 const Dashboard = () => {
     return (
         <div>
-            <NavBar/>
             <CreateButton/>
         </div>
     )
