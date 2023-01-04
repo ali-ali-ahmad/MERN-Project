@@ -29,11 +29,14 @@ const Chat = ({socket, username, room}) => {
             <h1>Live Chat</h1>
             <div className='messages'>
                 {messagelist.map((messagecontent, idx) => {
-                    return <div className='box' key={idx} >{messagecontent.username}: <h3>{messagecontent.message}</h3></div>
+                    return <div className='box' key={idx} >{messagecontent.username}: <h3>{messagecontent.message}</h3>
+                    <h6>{messagecontent.time}</h6></div>
                 })}
             </div>
-            <input type="text" onChange={(e) => {setMessage(e.target.value)}}/>
-            <button onClick={sendMessage} >&#9658;</button>
+            <div className='inputs'>
+                <input type="text" onChange={(e) => {setMessage(e.target.value)}}/>
+                <button onClick={sendMessage} >&#9658;</button>
+            </div>
         </div>
     )
 }
