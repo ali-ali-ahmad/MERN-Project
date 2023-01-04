@@ -22,12 +22,23 @@ function createData(projectName, description, lastUpdate, action) {
   return { projectName, description, lastUpdate, action };
 }
 
-const rows = [
-  createData('Frozen yoghurt', 'its a cold snack', '22-07-2022',<Grid><IconButton aria-label="delete"><DeleteIcon /></IconButton><IconButton aria-label="delete"><EditIcon /></IconButton></Grid>),
-
-];
 
 export default function ProjectList() {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const rows = [
+    createData('Frozen yoghurt', 'its a cold snack', '22-07-2022',<Grid><Button aria-label="delete" onClick={handleClickOpen}><DeleteIcon /></Button><IconButton aria-label="delete"><EditIcon /></IconButton></Grid>),
+  
+  ];
+
   return (
     <>
     <TableContainer component={Paper}>
@@ -58,6 +69,30 @@ export default function ProjectList() {
           ))}
         </TableBody>
       </Table>
+
+      <div>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"Are you sure you want to delete this project?"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+          Deleting will be permanent
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Cancel</Button>
+          <Button onClick={handleClose} autoFocus>
+            Delete
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </div>
     </TableContainer>
       </>
   );

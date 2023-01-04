@@ -43,8 +43,8 @@ const About = () => {
                 <div style={{border:'solid 4px black',borderRadius: '25% 10%',backgroundColor:'black',opacity:'0.91',color:'white',width:'300px', height :'280px', position:'relative', left:'465px',bottom:'150px'}}>
                     <div style={{marginLeft:'20px'}}>
                     <p> - Ali Rabah</p>
-                    <p> - Mathematics At An-Najah National University</p>
-                    <p> - Tulkarm , Saffarin</p>
+                    <p> - business administration At Al-Quds Open University</p>
+                    <p> - Ramallah </p>
                     <img src={ali}  style={{borderRadius:'50%',width:'130px',marginLeft:'70px'}} /></div>
                 </div>
                 </Popup></p>
@@ -52,8 +52,8 @@ const About = () => {
                 <div style={{border:'solid 4px black',borderRadius: '25% 10%',backgroundColor:'black',opacity:'0.91',color:'white',width:'300px', height :'280px', position:'relative', left:'465px',bottom:'170px'}}>
                     <div style={{marginLeft:'20px'}}>
                     <p> - Omar Salem</p>
-                    <p> - Mathematics At An-Najah National University</p>
-                    <p> - Tulkarm , Saffarin</p>
+                    <p> - marketing Management  At eastern mediterranean university</p>
+                    <p> - Nablus </p>
                     <img src={karam}  style={{borderRadius:'50%',width:'130px',marginLeft:'70px'}} /></div>
                 </div>
                 </Popup></p>
@@ -61,8 +61,8 @@ const About = () => {
                 <div style={{border:'solid 4px black',borderRadius: '25% 10%',backgroundColor:'black',opacity:'0.91',color:'white',width:'300px', height :'280px', position:'relative', left:'465px',bottom:'190px'}}>
                     <div style={{marginLeft:'20px'}}>
                     <p> - Karam Taha</p>
-                    <p> - Mathematics At An-Najah National University</p>
-                    <p> - Tulkarm , Saffarin</p>
+                    <p> - graphic design At An-Najah National University</p>
+                    <p> - Ramallah </p>
                     <img src={karam}  style={{borderRadius:'50%',width:'130px',marginLeft:'70px'}} /></div>
                 </div>
                 </Popup></p>

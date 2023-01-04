@@ -29,9 +29,9 @@
     color: white;
     background-color: red;
     border: none;
-    font-size: 27px;
-    border-radius: 7px;
-    padding: 7px;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px;
     cursor: pointer;
 }
 
