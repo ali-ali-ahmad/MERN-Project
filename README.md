@@ -1,6 +1,17 @@
-<h1>Assignment: Team Manager</h1>
+# **Fro-Frame** 
+##Group Members:
+   1-Ali Rabah
+   2-Marah Ashayer
+   3-Omar Salem
+   4-Karam Taha
 
-<p>Create an App 'Team Manager' which manages your team roster and RSVP for a 3 game series. Specifically, we should be able to add and remove players. We should also be able to view each player's status of 'Playing', 'Not Playing' and 'Undecided' for each of the 3 games. More details are included in the below wireframe. Make sure you read through the tasks below to understand which features are bonuses.</p>
+
+Project Introduction:
+
+ Fro-Frame is a website designed to help programers to start their essential front end code by building a wireframe from one side, and generate an HTML and CSS code which they can use to get started with their project. 
+By that we save for you the boring process of creating or adding non original designs and templates from other websites. 
+So set back, relax and let us do the job.
+</p>
 
 <img src="https://github.com/alirabah93/Coding-Dojo/blob/master/MERN/FullStackMERN/TeamManager/screenshots/pic1.jpg"/>
 <img src="https://github.com/alirabah93/Coding-Dojo/blob/master/MERN/FullStackMERN/TeamManager/screenshots/pic2.jpg"/>
