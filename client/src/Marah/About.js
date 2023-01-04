@@ -12,6 +12,7 @@ import Popup from 'reactjs-popup';
 import pic from './pic.jpg'
 import ali from './ali.jpg'
 import karam from './karam.png'
+import NavBar from '../components/NavBar/NavBar'
 
 const About = () => {
     const commonStyles = { 
@@ -25,7 +26,8 @@ const About = () => {
         
     };
     return (
-        
+        <>            
+        <NavBar/>
     <Card sx={{ maxWidth: 345 , borderRadius: '16px',...commonStyles, border: 1}}>
     {/* <CardMedia sx={{ height: 140 }} image="/logo2.png" title="green iguana"/> */}
     <Box component="img" sx={{ ml:4, height: 250,width: 800,maxHeight: { xs: 233, md: 167 }, maxWidth: { xs: 800, md: 250 },}}
@@ -81,7 +83,7 @@ const About = () => {
         <Button style={{marginLeft:'15px'}} size="small" >Contact Us</Button>
     </CardActions>
     </Card>
-
+    </>
 );
 }
 
