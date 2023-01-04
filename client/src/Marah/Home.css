@@ -1,5 +1,27 @@
-body{
+.body{
     background-image: url('img1.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
+    height: 700px;
+}
+
+.whoarewe{
+    position:absolute ;
+    border-radius: 10px;
+    /* border: 1px solid black; */
+    width: 40%;
+    margin-bottom: 20px;
+    margin-left: 1%;
+    /* background-color: lightgrey; */
+    opacity: 0.95;
+    font-family:'Times New Roman'
+}
+
+.baba-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app{
+    padding-right: 3%;
 }
