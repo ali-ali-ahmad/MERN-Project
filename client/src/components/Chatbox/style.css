@@ -5,18 +5,18 @@
     margin-right: 50px;
 }
 
-.test div {
-    width: 350px;
+.test .join {
+    width: 600px;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.test div input {
+.test .join input {
     font-size: 20px;
 }
 
-.test div button {
+.test .join button {
     font-size: 20px;
     background-color: green;
     color: white;

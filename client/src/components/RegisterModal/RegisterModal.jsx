@@ -1,11 +1,6 @@
 import React,{useState} from 'react'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Modal from '@mui/joy/Modal';
-import ModalDialog from '@mui/joy/ModalDialog';
-import Add from '@mui/icons-material/Add';
-import Typography from '@mui/joy/Typography';
-import Button from '@mui/joy/Button';
 import './register.css'
 
 const RegisterModal = () => {
@@ -45,25 +40,7 @@ const RegisterModal = () => {
 
     return (
         <div>
-            <React.Fragment>
-            <Button
-        color="neutral"
-        onClick={() => setOpen(true)}
-        className = "signup"
-      >
-        Sign Up
-      </Button>
-            <Modal open={open} onClose={() => setOpen(false)}>
-        <ModalDialog
-          aria-labelledby="basic-modal-dialog-title"
-          aria-describedby="basic-modal-dialog-description"
-          sx={{
-            maxWidth: 500,
-            borderRadius: 'md',
-            p: 2,
-            boxShadow: 'lg',
-          }}
-        >
+
           <form onSubmit={register} className = "form">
           <div className="form-group mb-2">
             <label>User Name:</label>
@@ -129,9 +106,6 @@ const RegisterModal = () => {
             value="Sign up"
           ></input>
         </form>
-        </ModalDialog>
-      </Modal>
-      </React.Fragment>
         </div>
     )
 }

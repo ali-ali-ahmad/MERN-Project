@@ -24,7 +24,7 @@ const ChatBox = () => {
         <NavBar/>
         <div className='test'>
             {!show ? (
-            <div>
+            <div className='join'>
             <h1>Join a Chat</h1>
             <input type="text" onChange={(e) => {setUsername(e.target.value)}} placeholder='UserName...'/>
             <input type="text" onChange={(e) => {setRoom(e.target.value)}} placeholder='Room ID...'/>
