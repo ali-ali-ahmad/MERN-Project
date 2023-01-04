@@ -7,6 +7,7 @@ import './css/main.css'
 // import PlayerForm from '../components/PlayerForm';
 // import CssGenerator from '../components/CssGenerator/CssGenerator';
 import TagGenerator from '../../components/TagGenerator/TagGenerator';
+import NavBar from '../../components/NavBar/NavBar';
 
 const TagHandler = (props) => {
     const [html, setHtml] = useState([]);
@@ -40,6 +41,7 @@ const TagHandler = (props) => {
             initialColor={styling.color}
             initialBGColor={styling.BGColor}
             /> */}
+            <NavBar/>
             <TagGenerator
             onSubmitTag={createTag}
             />

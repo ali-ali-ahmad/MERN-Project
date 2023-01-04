@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import './style.css'
 
 const Chat = ({socket, username, room}) => {
     const [message, setMessage] = useState("");
@@ -8,7 +9,7 @@ const Chat = ({socket, username, room}) => {
         if(message !== "") {
             const messageData = {
                 username: username,
-                room:room,
+                room: room,
                 message: message,
                 time: new Date(Date.now()).getHours() + 
                 ":" + new Date(Date.now()).getMinutes(),
@@ -24,11 +25,11 @@ const Chat = ({socket, username, room}) => {
     }, [socket]);
 
     return (
-        <div>
-            <p>Live Chat</p>
-            <div>
+        <div className='container'>
+            <h1>Live Chat</h1>
+            <div className='messages'>
                 {messagelist.map((messagecontent, idx) => {
-                    return <h1 key={idx} >{messagecontent.message}</h1>
+                    return <div className='box' key={idx} >{messagecontent.username}: <h3>{messagecontent.message}</h3></div>
                 })}
             </div>
             <input type="text" onChange={(e) => {setMessage(e.target.value)}}/>

@@ -1,0 +1,28 @@
+.test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.test div {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.test div input {
+    font-size: 20px;
+}
+
+.test div button {
+    font-size: 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}

@@ -6,7 +6,7 @@ import MyProjects from './views/MyProjects/MyProjects';
 import Profile from './views/Profile/Profile';
 import {Routes, Route} from 'react-router-dom';
 import Registration from './Marah/Registration';
-import NavBar from './components/NavBar/NavBar';
+import ChatBox from './components/Chatbox/ChatBox';
 // import Dashboard from './Marah/Dashboard';   
 
 
@@ -14,11 +14,11 @@ function App() {
     
     return (
         <>
-        <NavBar/>
             <Routes>
                 <Route element={<DisplayContainer/>} path='/create'/>
                 <Route element={<Registration/>} path='/login'/>
                 {/* <Route element={<Dashboard/>} path='/dashboard'/> */}
+                <Route element={<ChatBox/>} path='/chat'/>
                 <Route element={<Dashboard/>} path='/home'/>
                 <Route element={<Profile/>} path='/profile'/>
                 <Route element={<MyProjects/>} path='/projects'/>
