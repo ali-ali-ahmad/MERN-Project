@@ -9,13 +9,11 @@ import Registration from './Marah/Registration';
 import ChatBox from './components/Chatbox/ChatBox';
 import Home from './Marah/Home';   
 import About from './Marah/About';  
-import NavBar from './components/NavBar/NavBar';  
 
 function App() {
     
     return (
         <>
-        <NavBar/>
             <Routes>
                 <Route element={<DisplayContainer/>} path='/create'/>
                 <Route element={<Registration/>} path='/login'/>

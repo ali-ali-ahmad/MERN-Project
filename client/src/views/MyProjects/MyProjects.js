@@ -5,8 +5,8 @@ import ProjectList from '../../components/MyProjects/ProjectList'
 const MyProjects = () => {
     return (
         <div>
+            <NavBar/>
             <ProjectList/>
-            
         </div>
     )
 }
