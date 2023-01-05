@@ -11,6 +11,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom";
 import './style.css'
 import LoginModal from '../LoginModal/LoginModal';
+import logo2 from './logo2.png'
 
 const NavBar = () => {
     const [loggedInUser, setLoggedInUser] = useState(null);
@@ -42,19 +43,20 @@ const NavBar = () => {
         });
     };
     return (
+      <>
         <nav className='nav'>
             <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
                 <Toolbar className='tools' >
                 <div className='items'>
                     <Typography variant="h5">
-                    <Link className='Link' to={'/home'}>Logo</Link>
+                        {/* <Link className='Link' to={'/home'}>Logo</Link> */}
+                        <img style={{marginTop:'2px',marginLeft:'4px',height:'55px'}}  src={logo2} alt='logo'/>
                     </Typography>
                     <div className='navitems'>
                     <Link className='Link' to={'/profile'}>Profile</Link>
                     <Link className='Link' to={'/projects'}>My Projects</Link>
                     <Link className='Link' to={'/about'}>About</Link>
-                    <Link className='Link' to={'/chat'}>Chat</Link>
                     </div>
                 </div>
                 {loggedInUser ? (
@@ -68,6 +70,8 @@ const NavBar = () => {
             </AppBar>
             </Box>
         </nav>
+
+        </>
     )
 }
 

@@ -1,13 +1,14 @@
 import React,{useState} from 'react'
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from '@mui/joy/Button';
-import TextField from '@mui/joy/TextField';
 import Modal from '@mui/joy/Modal';
 import ModalDialog from '@mui/joy/ModalDialog';
-import Stack from '@mui/joy/Stack';
-import Add from '@mui/icons-material/Add';
-import Typography from '@mui/joy/Typography';
+import Box from '@mui/material/Box';
+import Tab from '@mui/material/Tab';
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+import TabPanel from '@mui/lab/TabPanel';
 import RegisterModal from '../RegisterModal/RegisterModal';
 import './login.css'
 
@@ -42,6 +43,12 @@ const LoginModal = () => {
         })
         .catch((err) => console.log(err));
     };
+
+    const [value, setValue] = React.useState('1');
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
     
   return (
     <React.Fragment>
@@ -58,13 +65,22 @@ const LoginModal = () => {
           aria-describedby="basic-modal-dialog-description"
           sx={{
             maxWidth: 500,
-            minHeight: 300,
+            minHeight: 400,
             borderRadius: 'md',
             p: 2,
             boxShadow: 'lg',
           }}
         >
-          <form onSubmit={login} className = "form">
+          <Box sx={{ width: '100%', typography: 'body1' }}>
+            <TabContext value={value}>
+              <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                <TabList onChange={handleChange} aria-label="lab API tabs example">
+                  <Tab label="Login" value="1" />
+                  <Tab label="Register" value="2" />
+                </TabList>
+              </Box>
+              <TabPanel value="1">
+              <form onSubmit={login} className = "form">
         {errormsg ? <p className="text-danger">{errormsg}</p> : ""}
         <div className="form-group mb-2">
           <label>Email: </label>
@@ -90,14 +106,12 @@ const LoginModal = () => {
           value="Login"
         ></input>
       </form>
-      <Typography
-            id="basic-modal-dialog-title"
-            component="h4"
-            level="inherit"
-            mb="0.25em"
-          >
-            Dont have an account? <RegisterModal/>
-          </Typography>
+              </TabPanel>
+              <TabPanel value="2">
+                <RegisterModal/>
+              </TabPanel>
+            </TabContext>
+          </Box>
         </ModalDialog>
       </Modal>
     </React.Fragment>

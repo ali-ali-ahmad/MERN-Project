@@ -1,20 +1,49 @@
-<h1>Assignment: Team Manager</h1>
+# Fro-Frame
 
-<p>Create an App 'Team Manager' which manages your team roster and RSVP for a 3 game series. Specifically, we should be able to add and remove players. We should also be able to view each player's status of 'Playing', 'Not Playing' and 'Undecided' for each of the 3 games. More details are included in the below wireframe. Make sure you read through the tasks below to understand which features are bonuses.</p>
+ Fro-Frame is a website designed to help programers to start their essential front end code by building a wireframe from one side, and generate an HTML and CSS code which they can use to get started with their project. 
+By that we save for you the boring process of creating or adding non original designs and templates from other websites. 
+So set back, relax and let us do the job.
 
-<img src="https://github.com/alirabah93/Coding-Dojo/blob/master/MERN/FullStackMERN/TeamManager/screenshots/pic1.jpg"/>
-<img src="https://github.com/alirabah93/Coding-Dojo/blob/master/MERN/FullStackMERN/TeamManager/screenshots/pic2.jpg"/>
-<img src="https://github.com/alirabah93/Coding-Dojo/blob/master/MERN/FullStackMERN/TeamManager/screenshots/pic3.jpg"/>
 
-<hr/>
+## Screenshots
 
-<p>To Do List:</p>
-<ul>
-    <li>Create a page to show the list of all players</li>
-    <li>Create a page to add a new player, which redirects back to the list page</li>
-    <li>When you delete a player, they should automatically disappear without a page refresh</li>
-    <li>By default, all validations should come from the backend</li>
-    <li>NINJA BONUS: Create front end validations as well</li>
-    <li>NINJA BONUS: Create a popup to confirm deleting a player</li>
-    <li>SENSEI BONUS: Create the Player Status page</li>
-</ul>
+
+![alt text](https://raw.githubusercontent.com/Marah-Ashayer/Group-Activity3/main/2.png)
+
+
+![alt text](https://raw.githubusercontent.com/Marah-Ashayer/Group-Activity3/main/5.png)
+
+
+![alt text](https://raw.githubusercontent.com/Marah-Ashayer/Group-Activity3/main/3.png)
+
+
+![alt text](https://raw.githubusercontent.com/Marah-Ashayer/Group-Activity3/main/44.png)
+
+
+## Tech Stack
+
+**Client:** React, JavaScript, HTML, CSS, Bootstrap, MUI, Socket.io 
+
+**Server:** Express, MongoDB, Node.js, Cors
+
+
+## Authors
+
+- [@Ali Rabah](https://github.com/alirabah93)
+- [@Omar Salem](https://github.com/Salem15963)
+- [@Marah Ashayer](https://github.com/Marah-Ashayer)
+- [@Karam Taha](https://github.com/Karam-taha)
+
+
+## Requirements:
+
+
+- Login and Registration
+- Socket.io
+- Material-ui
+
+
+## Documentation
+
+[Documentation](https://docs.google.com/document/d/1zYgs7nW_bQC7KK3u1kftiVlQsSFKfxb0lDbcC-YZXXk/edit)
+
