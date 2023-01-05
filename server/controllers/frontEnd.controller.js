@@ -1,9 +1,10 @@
 const { FrontEnd } = require("../models/frontEnd.model");
 
 module.exports.createFrontEnd = (request, response) => {
-    const { title, html, style } = request.body;
+    const { title, description, html, style } = request.body;
     FrontEnd.create({
         title,
+        description,
         html,
         style,
     })

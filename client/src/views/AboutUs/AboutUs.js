@@ -1,5 +1,5 @@
 import React from 'react'
-import LoginModal from '../../components/LoginModal/LoginModal'
+// import LoginModal from '../../components/LoginModal/LoginModal'
 import NavBar from '../../components/NavBar/NavBar'
 
 const AboutUs = () => {

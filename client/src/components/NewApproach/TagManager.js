@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 // import AllTags from "../../components/concept/AllTags";
 import TagsCreator from "./TagsCreator";
-import Css from "./Css";
-import DiscreteSliderSteps from "./Css";
+// import Css from "./Css";
+// import DiscreteSliderSteps from "./Css";
 
 
-const Manager = (props) => {
+const TagManager = (props) => {
     const [frontEnds, setFrontEnds] = useState([]);
-    const [loaded, setLoaded] = useState(false);
+    // const [loaded, setLoaded] = useState(false);
 
 
 
@@ -18,7 +18,7 @@ const Manager = (props) => {
     axios.get("http://localhost:8000/api/frontEnds")
         .then((res) => {
             setFrontEnds(res.data);
-            setLoaded(true);
+            // setLoaded(true);
         })
         .catch((err) => console.error(err));
     }, []);
@@ -50,4 +50,4 @@ const Manager = (props) => {
         </>
     );
 };
-export default Manager;
+export default TagManager;
