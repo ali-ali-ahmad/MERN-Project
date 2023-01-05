@@ -32,7 +32,7 @@ const RegisterModal = () => {
           if (res.data.errors) {
             setErrors(res.data.errors)
           } else {
-            navigate("/")
+            navigate("/:userProjects/create")
           }
         })
         .catch((err) => console.log(err));

@@ -58,6 +58,7 @@ const NavBar = () => {
                     <Link className='Link' to={'/profile'}>Profile</Link>
                     <Link className='Link' to={'/projects'}>My Projects</Link>
                     <Link className='Link' to={'/about'}>About</Link>
+                    <Link className='Link' to={'/chat'}>Chat</Link>
                     </div>
                 </div>
                 {loggedInUser ? (
