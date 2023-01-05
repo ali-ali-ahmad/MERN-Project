@@ -35,8 +35,8 @@ const LoginModal = () => {
         })
         .then((res) => {
           console.log(res);
-          if (res.data.msg == "success!") {
-            navigate("/profile");
+          if (res.data.msg === "success!") {
+            navigate("/:userProjects/create");
           } else {
             setErrormsg(res.data.msg);
           }

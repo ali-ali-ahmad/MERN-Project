@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import NavBar from '../components/NavBar/NavBar'
 import { Button } from '@mui/material';
+import CreateButton from '../components/CreateButton/CreateButton';
 
 const Home = () => {
 
@@ -15,6 +16,7 @@ const Home = () => {
                     <h1 style={{fontSize:'2.1rem',marginLeft:'4%'}}>Sit Back And Let Us Do The Job !</h1>
                     <Button style={{backgroundColor: 'rgb(255 240 89 / 1)',color:'black',marginLeft:'7%'}} href='/login'>Get Started</Button>
                 </div>
+        <CreateButton style={{position: 'sticky'}}/>
             </body>
             <br></br>
         <div className="App">

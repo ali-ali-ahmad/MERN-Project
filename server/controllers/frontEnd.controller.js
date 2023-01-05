@@ -1,16 +1,26 @@
 const { FrontEnd } = require("../models/frontEnd.model");
 
 module.exports.createFrontEnd = (request, response) => {
-    const { title, description, html, style } = request.body;
+    const { title, description, html, style, userProjects } = request.body;
     FrontEnd.create({
         title,
         description,
         html,
         style,
+        userProjects,
     })
         .then((frontEnd) => response.json(frontEnd))
         .catch((err) => response.json(err));
 };
+
+module.exports.findProjectsByUser= (request, response) => {
+    FrontEnd.find({ userProjects: request.params.id })
+      .sort({ createdAt: -1 })
+      .then((user) => response.json({ user }))
+      .catch((err) =>
+        response.json({ message: "something have gone wrong", error: err })
+      );
+  };
 
 module.exports.getAllFrontEnd = (request, response) => {
     FrontEnd.find({})

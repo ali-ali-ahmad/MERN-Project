@@ -10,7 +10,7 @@ import IconButton from  '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { Grid } from '@mui/material';
-import NavBar from '../NavBar/NavBar'
+// import NavBar from '../NavBar/NavBar'
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -18,13 +18,14 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
-function createData(projectName, description, lastUpdate, action) {
-  return { projectName, description, lastUpdate, action };
-}
+// function createData(projectName, description, lastUpdate, action) {
+//   return { projectName, description, lastUpdate, action };
+// }
 
 
-export default function ProjectList() {
+export default function ProjectList(props) {
   const [open, setOpen] = React.useState(false);
+  const{frontEnds}= props
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -34,10 +35,10 @@ export default function ProjectList() {
     setOpen(false);
   };
 
-  const rows = [
-    createData('Frozen yoghurt', 'its a cold snack', '22-07-2022',<Grid><Button aria-label="delete" onClick={handleClickOpen}><DeleteIcon /></Button><IconButton aria-label="delete"><EditIcon /></IconButton></Grid>),
+  // const rows = [
+  //   createData('Frozen yoghurt', 'its a cold snack', '22-07-2022',<Grid><Button aria-label="delete" onClick={handleClickOpen}><DeleteIcon /></Button><IconButton aria-label="delete"><EditIcon /></IconButton></Grid>),
   
-  ];
+  // ];
 
   return (
     <>
@@ -54,17 +55,17 @@ export default function ProjectList() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {frontEnds.map((tag) => (
             <TableRow
-              key={row.projectName}
+              key={tag._id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
               <TableCell component="th" scope="row">
-                {row.projectName}
+                {tag.title}
               </TableCell>
-              <TableCell align="right">{row.description}</TableCell>
-              <TableCell align="right">{row.lastUpdate}</TableCell>
-              <TableCell align="right">{row.action}</TableCell>
+              <TableCell align="right">{tag.description}</TableCell>
+              <TableCell align="right">{tag.updatedAt}</TableCell>
+              <TableCell align="right"><Grid><Button aria-label="delete" onClick={handleClickOpen}><DeleteIcon /></Button><IconButton aria-label="delete"><EditIcon /></IconButton></Grid></TableCell>
             </TableRow>
           ))}
         </TableBody>

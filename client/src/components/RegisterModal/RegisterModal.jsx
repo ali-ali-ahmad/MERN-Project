@@ -2,9 +2,9 @@ import React,{useState} from 'react'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import './register.css'
-
 const RegisterModal = () => {
-    const [open, setOpen] = React.useState(false);
+    // const [open, setOpen] = React.useState(false);
+    // let { userProjects } = useParams();
 
     const [errors, setErrors] = useState([]);
     const navigate = useNavigate();
@@ -32,7 +32,7 @@ const RegisterModal = () => {
           if (res.data.errors) {
             setErrors(res.data.errors)
           } else {
-            navigate("/home")
+            navigate("/")
           }
         })
         .catch((err) => console.log(err));

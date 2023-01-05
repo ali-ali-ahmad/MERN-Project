@@ -3,7 +3,7 @@ import React from 'react'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+// import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from "react-router-dom";
@@ -79,7 +79,7 @@ const About = () => {
         </Typography>        
     </CardContent>
     <CardActions style={{marginLeft:'30px'}}>
-        <Button variant="contained" size="large" href='/home'>Home</Button>
+        <Button variant="contained" size="large" href='/'>Home</Button>
         <Button style={{marginLeft:'15px'}} size="small" >Contact Us</Button>
     </CardActions>
     </Card>

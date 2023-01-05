@@ -28,7 +28,7 @@ const NavBar = () => {
         })
         .catch((err) => {
           console.log(err);
-          navigate("/home");
+          navigate("/");
         });
     }, []);
   
@@ -36,7 +36,7 @@ const NavBar = () => {
       await axios.get("http://localhost:8000/api/users/logout", { withCredentials: true })
         .then((res) => {
           console.log(res);
-          navigate("/home");
+          navigate("/");
         })
         .catch((err) => {
           console.log(err);
@@ -50,8 +50,9 @@ const NavBar = () => {
                 <Toolbar className='tools' >
                 <div className='items'>
                     <Typography variant="h5">
-                        {/* <Link className='Link' to={'/home'}>Logo</Link> */}
-                        <img style={{marginTop:'2px',marginLeft:'4px',height:'55px'}}  src={logo2} alt='logo'/>
+                        {/* <Link className='Link' to={'/'}>Logo</Link> */}
+                        <Link className='Link' to={'/'}><img style={{marginTop:'2px',marginLeft:'4px',height:'55px'}}  src={logo2} alt='logo'/></Link>
+                        {/* <img style={{marginTop:'2px',marginLeft:'4px',height:'55px'}}  src={logo2} alt='logo'/> */}
                     </Typography>
                     <div className='navitems'>
                     <Link className='Link' to={'/profile'}>Profile</Link>

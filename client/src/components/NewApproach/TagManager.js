@@ -3,12 +3,14 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 // import AllTags from "../../components/concept/AllTags";
 import TagsCreator from "./TagsCreator";
+import NavBar from "../NavBar/NavBar";
 // import Css from "./Css";
 // import DiscreteSliderSteps from "./Css";
 
 
 const TagManager = (props) => {
     const [frontEnds, setFrontEnds] = useState([]);
+    const{userProjects}= props
     // const [loaded, setLoaded] = useState(false);
 
 
@@ -43,9 +45,11 @@ const TagManager = (props) => {
 
     return (
         <>
+        <NavBar/>
             <TagsCreator
                 onNewFrontEnd={createFrontEnd}
                 onNewUpdate={updateFrontEnd}
+                userProjects={userProjects}
             />
         </>
     );

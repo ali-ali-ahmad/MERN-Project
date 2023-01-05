@@ -42,17 +42,18 @@ function a11yProps(index) {
 
 
 const TagsCreator = (props) => {
-    const {onNewFrontEnd, onNewUpdate} = props;
+    const {onNewFrontEnd, onNewUpdate, userProjects} = props;
     const [editStyle, setEditStyle] = useState({});
     const [title, setTitle] = useState();
     const [description, setDiscription] = useState();
     const [html, setHtml] = useState("");
     const [width, setWidth] = useState('100px');
     const [height, setHeight] = useState('100px');
-    const [color, setColor] = useState('red');
-    const [BGColor, setBGColor] = useState('blue');
-    const [display, setDisplay] = useState('flex');
-    const [content, setContent] = useState('add somethings');
+    const [color, setColor] = useState('');
+    const [BGColor, setBGColor] = useState('');
+    const [display, setDisplay] = useState('');
+    const [border, setBorder] = useState('');
+    const [content, setContent] = useState('');
     const [htmlStyle, setHtmlStyle] = useState([]);
     const [style, setStyle] = useState([]);
     // const [loaded, setLoaded] = useState(false);
@@ -70,6 +71,9 @@ const TagsCreator = (props) => {
     const divElement = `<div id=${id} class='${className}'>${content}</div>`;
     const h1Element = `<h1 id=${id} class='${className}'>${content}</h1>`;
     const pElement = `<p id=${id} class='${className}'>${content}</p>`;
+    // const formElement = `<form id=${id} class='${className}'>${content}</form>`;
+    // const inputElement = `<input id=${id} class='${className}'/>${content}`;
+    // const labelElement = `<label id=${id} class='${className}'>${content}</label>`;
 
     const head = ReactDOM.createRoot(document.getElementById('cssManager'));
     head.render(
@@ -94,7 +98,8 @@ const TagsCreator = (props) => {
                     height: height,
                     color: color,
                     BGColor: BGColor,
-                    display: display
+                    display: display,
+                    border: border
             }; 
         }else {
             return {obj};
@@ -107,6 +112,7 @@ const TagsCreator = (props) => {
         color: ${color};
         background-color: ${BGColor};
         display: ${display};
+        border: ${border};
         }`;
         setHtmlStyle([...htmlStyle, currentHtmlStyle]);
 
@@ -119,6 +125,7 @@ const TagsCreator = (props) => {
             color: ${color};
             background-color: ${BGColor};
             display: ${display};
+            border: ${border};
             }`;
             setStyle([...style, {id, className, width, height, color, BGColor}]);
             setHtmlStyle([...htmlStyle, currentHtmlStyle]);
@@ -133,6 +140,7 @@ const TagsCreator = (props) => {
             color: ${color};
             background-color: ${BGColor};
             display: ${display};
+            border: ${border};
             }`;
             setStyle([...style, {id, className, width, height, color, BGColor}]);
             setHtmlStyle([...htmlStyle, currentHtmlStyle]);
@@ -147,6 +155,7 @@ const TagsCreator = (props) => {
             color: ${color};
             background-color: ${BGColor};
             display: ${display};
+            border: ${border};
             }`;
             setStyle([...style, {id, className, width, height, color, BGColor}]);
             setHtmlStyle([...htmlStyle, currentHtmlStyle]);
@@ -164,7 +173,7 @@ const TagsCreator = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onNewFrontEnd( {title, description, html, style} );
+        onNewFrontEnd( {title, description, html, style, userProjects} );
     };
     const handleUpdate = (e) => {
         e.preventDefault();
@@ -202,8 +211,7 @@ const TagsCreator = (props) => {
         </div>
     </TabPanel>
     <TabPanel value={value} index={2}>
-        <div style={styling2}>
-            <code>{htmlStyle}</code>
+        <div style={styling2} dangerouslySetInnerHTML={{ __html: htmlStyle }}>
         </div>
     </TabPanel>
     </Box>
@@ -211,11 +219,12 @@ const TagsCreator = (props) => {
             <div>
             <input type="text" placeholder="id"  onChange={(e) => setId(e.target.value)}/>
             <input type="text" placeholder="class"  onChange={(e) => setClassName(e.target.value)}/>
-            <input type="text" placeholder="Width" value={editStyle.width} onChange={(e) => setWidth(e.target.value)}/>
+            <input type="text" placeholder="Width" value={width} onChange={(e) => setWidth(e.target.value)}/>
             <input type="text" placeholder="Height" value={height} onChange={(e) => setHeight(e.target.value)}/>
             <input type="text" placeholder="Color" value={color} onChange={(e) => setColor(e.target.value)}/>
             <input type="text" placeholder="BackGround Color" value={BGColor} onChange={(e) => setBGColor(e.target.value)}/>
-            <input type="text" placeholder="display" value={BGColor} onChange={(e) => setDisplay(e.target.value)}/>
+            <input type="text" placeholder="display" value={display} onChange={(e) => setDisplay(e.target.value)}/>
+            <input type="text" placeholder="Border" value={border} onChange={(e) => setBorder(e.target.value)}/>
             <textarea  rows="4" cols="50" placeholder="inner text" value={content} onChange={(e) => setContent(e.target.value)}/>
             </div>
         </div>

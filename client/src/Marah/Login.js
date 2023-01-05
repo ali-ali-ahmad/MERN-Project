@@ -22,8 +22,8 @@ const Login = () => {
       })
       .then((res) => {
         console.log(res);
-        if (res.data.msg == "success!") {
-          navigate("/dashboard");
+        if (res.data.msg === "success!") {
+          navigate("/");
         } else {
           setErrormsg(res.data.msg);
         }
