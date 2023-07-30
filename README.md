@@ -7,18 +7,9 @@ So set back, relax and let us do the job.
 
 ## Screenshots
 
-
-![alt text](https://raw.githubusercontent.com/Marah-Ashayer/Group-Activity3/main/2.png)
-
-
-![alt text](https://raw.githubusercontent.com/Marah-Ashayer/Group-Activity3/main/5.png)
-
-
-![alt text](https://raw.githubusercontent.com/Marah-Ashayer/Group-Activity3/main/3.png)
-
-
-![alt text](https://raw.githubusercontent.com/Marah-Ashayer/Group-Activity3/main/44.png)
-
+<img src="screenshots/pic1.jpg"/>
+<img src="screenshots/pic2.jpg"/>
+<img src="screenshots/pic3.jpg"/>
 
 ## Tech Stack
 
