@@ -7,9 +7,8 @@ So set back, relax and let us do the job.
 
 ## Screenshots
 
-<img src="screenshots/pic1.jpg"/>
-<img src="screenshots/pic2.jpg"/>
-<img src="screenshots/pic3.jpg"/>
+<img src="screenshots/froFrame2.jpg"/>
+<img src="screenshots/froFrame3.jpg"/>
 
 ## Tech Stack
 
